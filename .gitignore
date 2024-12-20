@@ -1,5 +1,24 @@
+# Dependencies
+node_modules
 .next
+
+# Build directories
 build
 coverage
-dist
-node_modules
+
+# Keep only the necessary dist files for react-native-web
+packages/*/dist/*
+!packages/react-native-web/dist
+packages/react-native-web/dist/*
+!packages/react-native-web/dist/cjs
+!packages/react-native-web/dist/index.js
+!packages/react-native-web/dist/index.js.flow
+
+# Documentation and examples
+packages/react-native-web-docs/dist
+packages/react-native-web-examples/dist
+packages/benchmarks/dist
+
+# Other
+.DS_Store
+*.log
